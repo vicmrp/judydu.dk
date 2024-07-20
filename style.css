@@ -1,0 +1,50 @@
+.main {
+    display: flex; /* Enable flexbox */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Center items vertically */
+    height: 100%; /* Adjust based on your layout needs */
+    width: 100%;
+    margin: 0; /* Removes margin */
+    padding: 0; /* Removes padding */
+}
+
+
+
+.video-container {
+    position: relative; /* Establishes a positioning context */
+    height: 100%; /* Adjust based on your layout needs */
+    width: 100%;
+
+    margin: 0; /* Removes margin */
+}
+
+.video-segment {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33.3%; /* Adjusts the width as needed, could be 100% or a specific width */
+    height: auto; /* Adjusts the height as needed, could maintain aspect ratio */
+}
+
+
+#video1 {
+    top: 20px; /* Moves #video1 20px down from the top */
+    left: 20px; /* Moves #video1 20px to the right from the left */
+    width: 500px; /* Adjusts the width to a static size of 500 pixels */
+}
+
+#video2 {
+    top: 400px; /* Moves #video2 20px down from the top */
+    left: 400px; /* Moves #video2 20px to the right from the left */
+    width: 300px; /* Adjusts the width to a static size of 300 pixels */
+    opacity: 0.5; /* Makes #video2 50% transparent */
+    z-index: 100; /* Ensures #video2 is in front of other content (adjust as needed) */
+    position: relative; /* Required for z-index to work */
+}
+
+#video3 {
+    top: -150px; /* Moves #video1 20px down from the top */
+    left: 800px; /* Moves #video1 20px to the right from the left */
+    width: 400px;;
+}

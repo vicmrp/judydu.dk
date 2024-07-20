@@ -1,15 +1,67 @@
+:root {
+    --header-height: 50px; /* Adjust based on actual header height */
+    --footer-height: 50px; /* Adjust based on actual footer height */
+}
+
+
+
 html, body {
-    height: 100%; /* Ensures the html and body elements take up the full height of the page */
-    margin: 0; /* Resets the default margin */
+    height: 100%; /* Full height of the viewport */
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
 }
 
 body {
+    min-height: 100vh; /* Ensure at least viewport height */
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Minimum height is full viewport height */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
 }
+
+
+
+
+/* Ensure that the box model doesn't affect the height calculations */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+header, footer {
+    flex-shrink: 0; /* Prevents header and footer from shrinking */
+}
+
+
+header {
+    z-index: 1000; /* Keeps the header on top */
+    height: var(--header-height);
+    overflow: hidden;
+}
+
+
+main {
+    background-color: #212846; /* Set the background color to #212846 */
+    flex-grow: 1; /* Takes up remaining space */
+    overflow: auto; /* Adds scroll to main content if content overflows */
+    padding: 10px; /* Optional: Adds some padding inside main */
+}
+
+
+footer {
+    background-color: #f8f9fa; /* Light grey background */
+    width: 100%; /* Ensure the footer takes up the full width of the viewport */
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    margin: 0;
+    z-index: 1000; /* Ensures the footer is in front of other content */
+    height: var(--footer-height);
+    overflow: hidden;
+}
+
+
+
 
 .navbar-brand-image {
     height: 30px; /* Adjust the size as needed */
@@ -30,6 +82,9 @@ body {
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for color change */
 }
 
+
+
+
 .nav-link:hover {
 
     background-color: #a5afb9; /* Change to any color you prefer */
@@ -40,19 +95,8 @@ body {
 
 
 
-main {
-    flex-grow: 1; /* Allows the main content to expand and take up any available space */
-}
 
 
-footer {
-    background-color: #f8f9fa; /* Light grey background */
-    width: 100%; /* Ensure the footer takes up the full width of the viewport */
-    display: flex; /* Enable flexbox */
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    margin: 0;
-}
 
 .footer-icons {
     display: flex; /* Enable flexbox */
