@@ -44,7 +44,7 @@ main {
     background-color: #212846; /* Set the background color to #212846 */
     flex-grow: 1; /* Takes up remaining space */
     overflow: auto; /* Adds scroll to main content if content overflows */
-    padding: 10px; /* Optional: Adds some padding inside main */
+    
 }
 
 
