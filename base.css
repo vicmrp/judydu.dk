@@ -1,0 +1,40 @@
+html, body {
+    height: 100%; /* Ensures the html and body elements take up the full height of the page */
+    margin: 0; /* Resets the default margin */
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Minimum height is full viewport height */
+}
+
+main {
+    flex-grow: 1; /* Allows the main content to expand and take up any available space */
+}
+
+
+footer {
+    background-color: #f8f9fa; /* Light grey background */
+    width: 100%; /* Ensure the footer takes up the full width of the viewport */
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    margin: 0;
+}
+
+.footer-icons {
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Center icons vertically */
+    justify-content: center; /* Center icons horizontally */
+    padding: 10px 0; /* Add padding for visual comfort */
+    margin:0
+}
+
+.footer-icons a {
+    color: inherit; /* Maintain icon color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Add spacing between icons */
+}
