@@ -22,9 +22,65 @@
     font-family: 'Arial', sans-serif; /* Standard readable font */
 }
 
-.greeting {
-    font-size: 1px; /* Adjusts the font size to be 1/3 of the original size */
+
+
+@keyframes flyInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
+
+
+
+
+
+@keyframes flyInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.greeting, #judyWorld, .welcomeMsg {
+    animation: flyInRight 0.8s ease-out forwards;
+    opacity: 0;  /* Start elements as invisible */
+}
+
+.greeting {
+    animation-delay: 0.5s; /* Delays the start of the animation */
+}
+
+#judyWorld {
+    animation-delay: 1s; /* Slightly later to create a sequential effect */
+}
+
+.welcomeMsg {
+    animation-delay: 1.5s; /* Further delayed for each subsequent paragraph */
+}
+
+/* Apply the delay progressively for each welcome message in different languages */
+.welcomeMsg:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.welcomeMsg:nth-child(4) {
+    animation-delay: 2.5s;
+}
+
+.welcomeMsg:nth-child(5) {
+    animation-delay: 3s;
+}
+
+
 
 .text-container h1 {
     font-size: 4rem; /* Larger font for main title */
