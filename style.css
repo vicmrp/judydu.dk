@@ -62,7 +62,6 @@
     left: 0; /* Aligns to the left of .video-container */
     width: 400px; /* Keeps the width as previously defined */
     margin-left: 0; /* Resets any previously set margin-left */
-    border-radius: 20px; /* Adds rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
     z-index: 3;
 }
@@ -73,7 +72,6 @@
     width: 400px; /* Adjusts the width to a static size of 500 pixels */
     opacity: 0.5; /* Makes #video2 50% transparent */
     transform: translate(-50%, -50%); /* Centers the element */
-    border-radius: 20px; /* Adds rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
     z-index: 1;
 }
@@ -85,7 +83,7 @@
     width: 400px; /* Keeps the width as previously defined */
     margin-left: 0; /* Resets any previously set margin-left */
     opacity: 0.7;
-    border-radius: 20px; /* Adds rounded corners */
+    
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
     z-index: 2;
 }

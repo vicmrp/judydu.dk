@@ -34,9 +34,9 @@ header, footer {
 
 
 header {
-    z-index: 1000; /* Keeps the header on top */
+    z-index: 9999; /* Keeps the header on top */
     height: var(--header-height);
-    overflow: hidden;
+    
 }
 
 
@@ -44,6 +44,7 @@ main {
     background-color: #212846; /* Set the background color to #212846 */
     flex-grow: 1; /* Takes up remaining space */
     overflow: auto; /* Adds scroll to main content if content overflows */
+    z-index: 1;
     
 }
 
@@ -60,7 +61,14 @@ footer {
     overflow: hidden;
 }
 
+.navbar-toggler {
+    z-index: 9999; /* Ensures highest stacking order */
+    position: relative; /* z-index works on positioned elements (not static) */
+}
 
+#navbarNav {
+    z-index: 9999; /* Ensures highest stacking order */
+}
 
 
 .navbar-brand-image {
