@@ -48,18 +48,21 @@ main {
     
 }
 
-
 footer {
     background-color: #f8f9fa; /* Light grey background */
     width: 100%; /* Ensure the footer takes up the full width of the viewport */
     display: flex; /* Enable flexbox */
     align-items: center; /* Center content vertically */
     justify-content: center; /* Center content horizontally */
-    margin: 0;
+    margin: 0; /* Reset any default margin */
+    padding: 0; /* Reset any default padding */
     z-index: 1000; /* Ensures the footer is in front of other content */
+    height: 50px; /* Ensure enough height for content to be centered */
     height: var(--footer-height);
-    overflow: hidden;
+    overflow: hidden; /* Hide overflow */
 }
+
+
 
 .navbar-toggler {
     z-index: 9999; /* Ensures highest stacking order */
@@ -110,12 +113,13 @@ footer {
     display: flex; /* Enable flexbox */
     align-items: center; /* Center icons vertically */
     justify-content: center; /* Center icons horizontally */
-    padding: 10px 0; /* Add padding for visual comfort */
-    margin:0
+    padding: 0; /* No padding inside */
+    margin: 0; /* No margin inside */
+    height: 100%;
 }
-
 .footer-icons a {
     color: inherit; /* Maintain icon color */
     text-decoration: none; /* Remove underline */
-    margin: 0 10px; /* Add spacing between icons */
+    margin: 0 13px; /* Add spacing between icons */
+    height: 100%;
 }
