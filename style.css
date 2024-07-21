@@ -115,17 +115,21 @@
 #video1 {
     position: absolute; /* Changed from relative to absolute */
     top:0px; /* Aligns to the top of .video-container */
-    left: 0; /* Aligns to the left of .video-container */
-    width: 50vw; /* Keeps the width as previously defined */
-    max-height: 80VW;
+    left: 4vw; /* Aligns to the left of .video-container */
+    min-width: 430px; /* Limits the width to 300 pixels */
+    width: 35vw; /* Keeps the width as previously defined */
+    max-width: 600px;
+    min-height: 800px;
     margin-left: 0; /* Resets any previously set margin-left */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
     z-index: 3;
+    opacity: 0.8; /* Makes #video1 50% transparent */
+    object-fit: cover;
 }
 #video2 {
     position: absolute; /* Or 'fixed' if you want it relative to the viewport */
     top: 600px;
-    left: 53%;
+    left: 50vw;
     width: 400px; /* Adjusts the width to a static size of 500 pixels */
     opacity: 0.5; /* Makes #video2 50% transparent */
     transform: translate(-50%, -50%); /* Centers the element */
@@ -140,7 +144,7 @@
     width: 50vw; /* Keeps the width as previously defined */
     max-width: 500px; /* Limits the width to 500 pixels */
     margin-left: 0; /* Resets any previously set margin-left */
-    opacity: 0.3;
+    opacity: 0.4;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
     z-index: 2;
 }
