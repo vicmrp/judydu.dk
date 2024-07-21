@@ -116,7 +116,8 @@
     position: absolute; /* Changed from relative to absolute */
     top:0px; /* Aligns to the top of .video-container */
     left: 0; /* Aligns to the left of .video-container */
-    width: 400px; /* Keeps the width as previously defined */
+    width: 50vw; /* Keeps the width as previously defined */
+    max-height: 80VW;
     margin-left: 0; /* Resets any previously set margin-left */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
     z-index: 3;
@@ -136,10 +137,10 @@
     position: absolute; /* Changed from relative to absolute */
     top:-150px; /* Aligns to the top of .video-container */
     right: 0; /* Aligns to the right of .video-container */
-    width: 400px; /* Keeps the width as previously defined */
+    width: 50vw; /* Keeps the width as previously defined */
+    max-width: 500px; /* Limits the width to 500 pixels */
     margin-left: 0; /* Resets any previously set margin-left */
-    opacity: 0.7;
-    
+    opacity: 0.3;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
     z-index: 2;
 }
@@ -154,6 +155,7 @@
     width: 1000px; /* Example size */
     height: 500px; /* Example size */
     background: #504B43;
+    opacity: 0.4;
     position: absolute; /* Positions it relative to the nearest positioned ancestor */
     bottom: 0; /* Aligns it to the bottom */
 }
@@ -167,4 +169,12 @@
     right:0;
 }
 
-
+#background-2 {
+    width: 500px; /* Example size */
+    height: 500px; /* Example size */
+    background: #504B43;
+    opacity: 0.4;
+    position: absolute; /* Positions it relative to the nearest positioned ancestor */
+    bottom: 0; /* Aligns it to the bottom */
+    right:0;
+}
