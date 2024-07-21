@@ -162,6 +162,7 @@
     opacity: 0.4;
     position: absolute; /* Positions it relative to the nearest positioned ancestor */
     bottom: 0; /* Aligns it to the bottom */
+    overflow: hidden;
 }
 
 #background-2 {
@@ -171,6 +172,7 @@
     position: absolute; /* Positions it relative to the nearest positioned ancestor */
     bottom: 0; /* Aligns it to the bottom */
     right:0;
+    overflow: hidden;
 }
 
 #background-2 {
@@ -181,4 +183,45 @@
     position: absolute; /* Positions it relative to the nearest positioned ancestor */
     bottom: 0; /* Aligns it to the bottom */
     right:0;
+    overflow: hidden;
+}
+
+
+
+
+
+/* Responsive design */
+@media (max-width: 767px) {
+
+
+    .video-container {
+        width: 100%;
+    }
+
+    #video1 {
+        position: static; /* Resets to default positioning */
+        top: auto; /* Resets top alignment */
+        left: auto; /* Resets left alignment */
+        min-width: auto; /* Resets minimum width */
+        width: auto; /* Resets width to default */
+        max-width: none; /* Removes max-width restriction */
+        min-height: auto; /* Resets minimum height */
+        margin-left: auto; /* Resets margin-left */
+        box-shadow: none; /* Removes box-shadow */
+        z-index: auto; /* Resets z-index to its default */
+        opacity: 1; /* Resets opacity to fully opaque */
+        object-fit: fill; /* Resets object-fit to default */
+    }
+
+    #video2  {
+        display: none; /* Hides the video on smaller screens */
+    }
+
+    #video3 {
+        display: none; /* Hides the video on smaller screens */
+    }
+
+    #background-1, #background-2, #background-3 {
+        display: none; /* Hides the background on smaller screens */
+    }
 }
