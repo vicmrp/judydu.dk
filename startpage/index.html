@@ -1,73 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<style>
-    body {
-        display: none;
-    }
-</style>
 
-<head>
-    <!-- Dynamic head content will be loaded here -->
-</head>
+
+<!-- Dynamic head content will be loaded here -->
+<head></head>
+
 <body>
     <!-- Dynamic header content will be loaded here -->
-    <header></header>
+    <header>
+        <title>JUDY DU</title>
+    </header>
+    <!-- Dynamic header content will be loaded here -->
 
-    <!-- Main content unique to this page starts here -->
-    <main>
+    <!-- Dynamic main content will be loaded here -->
+    <div class="main-outer">
         <section class="main">
             <div class="text-container">
                 <h1 class="greeting">WELCOME TO</h1>
                 <h1 id="judyWorld" style="font-size: 8vw; font-weight: bold;">JUDY'S WORLD</h1>
                 <p class="welcomeMsg">VELKOMMEN TIL MIN VERDEN</p>
-            </div>
-                        
-
+            </div>    
+    
             <div class="video-container">
-                <video muted autoplay class="video-segment" id="video1">
-                    <source src="/video/startpage.mov" type="video/mp4">
+                <video muted autoplay loop class="video-segment" id="video1">
+                    <source src="/video/startpage.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <video muted autoplay  class="video-segment" id="video2">
-                    <source src="/video/startpage.mov" type="video/mp4">
+                <video muted autoplay loop class="video-segment" id="video2">
+                    <source src="/video/startpage.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <video muted autoplay  class="video-segment" id="video3">
-                    <source src="/video/startpage.mov" type="video/mp4">
+                <video muted autoplay loop class="video-segment" id="video3">
+                    <source src="/video/startpage.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div> 
-        <div id="background-1"></div>
-        <div id="background-2"></div>
-        <div id="background-3"></div>
+            <div id="background-1"></div>
+            <div id="background-2"></div>
+            <div id="background-3"></div>
         </section>
-    </main>
-    <!-- Main content unique to this page ends here -->
+    </div>
+    <!-- Dynamic main content will be loaded here -->
 
     <!-- Dynamic footer content will be loaded here -->
     <footer></footer>
 
-    <!-- JavaScript to dynamically load head, header, and footer -->
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const includeHTML = (el, url) => {
-            const xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    el.innerHTML = xhr.responseText;
-                    document.dispatchEvent(new Event('includeContentLoaded', {bubbles: true}));
-                }
-            };
-            xhr.open("GET", url, true);
-            xhr.send();
-        };
 
-        includeHTML(document.querySelector("head"), "/head.html");
-        includeHTML(document.querySelector("header"), "/header.html");
-        includeHTML(document.querySelector("footer"), "/footer.html");
-    });
-    </script>
 
     <!-- NoScript tag for browsers where JavaScript is disabled -->
     <noscript>
@@ -78,5 +57,22 @@
             This website requires JavaScript. Please enable JavaScript to continue using the site.
         </div>
     </noscript>
+
+
+    <script 
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+    
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    
+    <script defer src="/base.js"></script>
+    <script defer src="./script.js"></script>
+    
+
+
 </body>
 </html>

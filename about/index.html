@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Dynamic head content will be loaded here -->
+</head>
+<body>
+    <!-- Dynamic header content will be loaded here -->
+    <header></header>
+
+    <!-- Dynamic main content will be loaded here -->
+    <main></main>
+    <!-- Dynamic main content will be loaded here -->
+
+    <!-- Dynamic footer content will be loaded here -->
+    <footer></footer>
+
+    <!-- JavaScript to dynamically load head, header, and footer -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const includeHTML = (el, url) => {
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    el.innerHTML = xhr.responseText;
+                    document.dispatchEvent(new Event('includeContentLoaded', {bubbles: true}));
+                }
+            };
+            xhr.open("GET", url, true);
+            xhr.send();
+        };
+
+        includeHTML(document.querySelector("head"), "/head.html");
+        includeHTML(document.querySelector("header"), "/header.html");
+        includeHTML(document.querySelector("main"), "./main.html");
+        includeHTML(document.querySelector("footer"), "/footer.html");
+    });
+    </script>
+
+    <!-- NoScript tag for browsers where JavaScript is disabled -->
+    <noscript>
+        <style type="text/css">
+            .container { display:none; }
+        </style>
+        <div style="background-color: red; color: white; padding: 20px; text-align: center;">
+            This website requires JavaScript. Please enable JavaScript to continue using the site.
+        </div>
+    </noscript>
+</body>
+</html>
