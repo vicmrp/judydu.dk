@@ -1,0 +1,25 @@
+
+    <!-- Footer section starts here -->
+    <!-- This footer is consistent across all pages -->
+
+        <div class="container text-center footer-icons mt-4">
+            <!-- Link to your LinkedIn profile -->
+            <a href="https://www.linkedin.com/in/judy-du-978223270" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin" style="font-size: 24px; color: #0077B5;"></i>
+            </a>
+            <!-- Link to your Instagram profile -->
+            <a href="https://www.instagram.com/due_rrr" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram" style="font-size: 24px; color: #E1306C;"></i>
+            </a>
+
+            <!-- Link to your GitHub profile -->
+            <a href="https://github.com/judy-du" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github" style="font-size: 24px; color: #333;"></i>
+            </a>
+
+            test
+        </div>
+
+    <!-- Footer section ends here -->
+
+

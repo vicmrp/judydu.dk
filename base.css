@@ -9,15 +9,17 @@ html, body {
     height: 100%; /* Full height of the viewport */
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
+    overflow: hidden;
+    max-width: 100vw;
 }
 
 body {
     min-height: 100vh; /* Ensure at least viewport height */
+    max-height: 100vh; /* Ensure at most viewport height */
     display: flex;
     flex-direction: column;
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    max-width: 100vw;
 }
 
 
@@ -30,22 +32,24 @@ body {
 
 header, footer {
     flex-shrink: 0; /* Prevents header and footer from shrinking */
+    max-width: 100vw;
 }
 
 
 header {
     z-index: 9999; /* Keeps the header on top */
     height: var(--header-height);
-    
+    max-width: 100vw;
 }
 
 
 main {
     background-color: #212846; /* Set the background color to #212846 */
     flex-grow: 1; /* Takes up remaining space */
-    overflow: auto; /* Adds scroll to main content if content overflows */
+    overflow: hidden; /* Adds scroll to main content if content overflows */
     z-index: 1;
-    
+    max-height: calc(100vh - var(--header-height) - var(--footer-height));
+    max-width: 100vw;
 }
 
 footer {
@@ -60,6 +64,7 @@ footer {
     height: 50px; /* Ensure enough height for content to be centered */
     height: var(--footer-height);
     overflow: hidden; /* Hide overflow */
+    max-width: 100vw;
 }
 
 

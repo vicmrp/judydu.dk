@@ -96,6 +96,7 @@
     font-weight: bold; /* Bolder font for emphasis */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Shadow for legibility */
     margin-bottom: 0.5rem; /* Space between main title and subtitles */
+    
 }
 
 .text-container p {
@@ -137,7 +138,7 @@
 }
 #video2 {
     position: absolute; /* Or 'fixed' if you want it relative to the viewport */
-    top: 600px;
+    top: 800px;
     left: 50vw;
     width: 400px; /* Adjusts the width to a static size of 500 pixels */
     opacity: 0.5; /* Makes #video2 50% transparent */
@@ -151,7 +152,7 @@
     top:-150px; /* Aligns to the top of .video-container */
     right: 0; /* Aligns to the right of .video-container */
     width: 50vw; /* Keeps the width as previously defined */
-    max-width: 500px; /* Limits the width to 500 pixels */
+    max-width: 700px; /* Limits the width to 500 pixels */
     margin-left: 0; /* Resets any previously set margin-left */
     opacity: 0.4;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
@@ -179,7 +180,7 @@
     height: 500px; /* Example size */
     background: #404E66;
     position: absolute; /* Positions it relative to the nearest positioned ancestor */
-    bottom: 0; /* Aligns it to the bottom */
+    bottom: 10; /* Aligns it to the bottom */
     right:0;
     overflow: hidden;
 }
@@ -200,26 +201,22 @@
 
 
 /* Responsive design */
-@media (max-width: 767px) {
+@media (max-width: 1010px) {
 
 
     .video-container {
         width: 100%;
     }
 
+
+
+
     #video1 {
-        position: static; /* Resets to default positioning */
-        top: auto; /* Resets top alignment */
-        left: auto; /* Resets left alignment */
-        min-width: auto; /* Resets minimum width */
-        width: auto; /* Resets width to default */
-        max-width: none; /* Removes max-width restriction */
-        min-height: auto; /* Resets minimum height */
-        margin-left: auto; /* Resets margin-left */
-        box-shadow: none; /* Removes box-shadow */
-        z-index: auto; /* Resets z-index to its default */
-        opacity: 1; /* Resets opacity to fully opaque */
-        object-fit: fill; /* Resets object-fit to default */
+        top:0;
+        left:0;
+        width: 100vw; /* Adjusts the width to 100% of the parent container */
+        height: calc(100vh - var(--header-height) - var(--footer-height)); /* Adjusts the height to 100% of the parent container */
+        
     }
 
     #video2  {
