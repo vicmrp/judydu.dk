@@ -1,0 +1,238 @@
+/*
+.portfolio-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+    */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.main-outer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+
+.main-inner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 100vw;
+    /* margin-bottom: 50px; */
+}
+
+.main-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 100vw;
+}
+
+
+
+
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    z-index: 1;
+}
+
+.hidden {
+    opacity: 0;
+    z-index: -1;
+}
+
+.visible {
+    opacity: 1;
+    z-index: 1;
+}
+
+.buttons {
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-floating {
+    border: none;
+    font-size: 20px;
+    border-radius: 0;
+    opacity: 0.9;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    z-index: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-color);
+    color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 768px) {
+    .btn-floating {
+        font-size: 14px; 
+    }
+}
+@media screen and (max-width: 576px) {
+    .btn-floating {
+        font-size: 12px; 
+    }
+}
+
+.text-floating {
+    position: absolute;
+    bottom: 5%;
+    right: 20px;
+    z-index: 1;
+}
+
+.text-floating-product-name {
+    color: var(--text-color);
+    font-size: 30px;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+.text-floating-description {
+    color: var(--text-color);
+    font-size: 20px;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+
+.text-floating-price {
+    color: var(--text-color);
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+    .text-floating-product-name {
+        font-size: 20px; 
+    }
+}
+@media screen and (max-width: 576px) {
+    .text-floating-product-name {
+        font-size: 18px; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .text-floating-description, .text-floating-price  {
+        font-size: 14px; 
+    }
+}
+@media screen and (max-width: 576px) {
+    .text-floating-description, .text-floating-price  {
+        font-size: 12px; 
+    }
+}
+
+.btn-shopping:hover,
+.btn-floating:hover {
+    background-color: var(--hover-color);
+    color: var(--text-color);
+}
+
+.btn-shopping {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 20px; 
+    border-radius: 0; 
+    border: none;
+}
+
+@media screen and (max-width: 768px) {
+    .btn-shopping  {
+        font-size: 14px; 
+    }
+}
+@media screen and (max-width: 576px) {
+    .btn-shopping  {
+        font-size: 12px; 
+    }
+}
+
+section#about-us {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 80px 50px;
+    border-top: 1px solid #ddd;
+}
+
+section#about-us h2 {
+    color: #555555dd;
+    font-size: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    section#about-us h2  {
+        font-size: 18px; 
+    }
+}
+@media screen and (max-width: 576px) {
+    section#about-us h2  {
+        font-size: 16px; 
+    }
+}
+
+section#about-us p {
+    color: #777;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    section#about-us p  {
+        font-size: 14px; 
+    }
+}
+@media screen and (max-width: 576px) {
+    section#about-us p  {
+        font-size: 12px; 
+    }
+}
+
+section#about-us::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 1px;
+    background-color: #ddd;
+    margin-top: -1px;
+    margin-left: auto;
+    margin-right: auto;
+}

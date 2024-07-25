@@ -96,7 +96,6 @@
     font-weight: bold; /* Bolder font for emphasis */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Shadow for legibility */
     margin-bottom: 0.5rem; /* Space between main title and subtitles */
-    
 }
 
 .text-container p {
@@ -136,6 +135,9 @@
     opacity: 0.8; /* Makes #video1 50% transparent */
     object-fit: cover;
 }
+
+
+
 #video2 {
     position: absolute; /* Or 'fixed' if you want it relative to the viewport */
     top: 800px;
@@ -206,17 +208,23 @@
 
     .video-container {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
     }
 
 
 
 
     #video1 {
+        position: relative; /* Resets the position to default */
         top:0;
         left:0;
         width: 100vw; /* Adjusts the width to 100% of the parent container */
-        height: calc(100vh - var(--header-height) - var(--footer-height)); /* Adjusts the height to 100% of the parent container */
-        
+        max-height: calc(50px); /* Adjusts the height to 100% of the parent container */
+        object-fit: cover;
     }
 
     #video2  {
@@ -230,4 +238,7 @@
     #background-1, #background-2, #background-3 {
         display: none; /* Hides the background on smaller screens */
     }
+
+
+
 }
